@@ -1,0 +1,219 @@
+////
+/// Mixin
+////
+
+/// Breakpoints
+
+/// Phone breakpoint
+/// @type Number
+/// @group Breakpoints
+$small: 480px;
+
+/// Large phone breakpoint
+/// @type Number
+/// @group Breakpoints
+$middle: 766px;
+
+/// Tablet breakpoint
+/// @type Number
+/// @group Breakpoints
+$large: 1024px;
+
+/// Laptop breakpoint
+/// @type Number
+/// @group Breakpoints
+$extraLarge: 1280px;
+
+/// Monitor breakpoint
+/// @type Number
+/// @group Breakpoints
+$doubleExtraLarge: 1440px;
+
+/// HD monitor breakpoint
+/// @type Number
+/// @group Breakpoints
+$highDefinition: 1920px;
+
+/// Retina monitor breakpoint
+/// @type Number
+/// @group Breakpoints
+$retina: 2560px;
+
+// So media queries don't overlap when required, provide a maximum
+$screenMMax: ($large - 1);
+$screenLMax: ($extraLarge - 1);
+$screenXLMax: ($doubleExtraLarge - 1);
+$screenHDMax: ($retina - 1);
+
+// Media queries
+// --------------------------------------------------
+
+/// Media query mixin with min and max width
+/// @param {Number} $minWidth - min width
+/// @param {Number} $maxWidth - max width
+/// @group Media queries
+@mixin screen($minWidth, $maxWidth) {
+	// using plus '1' for don't overlap
+	@media screen and (min-width: $minWidth + 1) and (max-width: $maxWidth) {
+		@content;
+	}
+}
+/// Media query mixin with only max width
+/// @param {Number} $maxWidth - max width
+/// @group Media queries
+@mixin maxScreen($maxWidth) {
+	@media screen and (max-width: $maxWidth) {
+		@content;
+	}
+}
+/// Media query mixin with only min width
+/// @param {Number} $minWidth - min width
+/// @group Media queries
+@mixin minScreen($minWidth) {
+	// using plus '1' for don't overlap
+	@media screen and (min-width: $minWidth + 1) {
+		@content;
+	}
+}
+// --------------------------------------------------
+
+/// Font face creating
+/// @param $fontName  - font name
+/// @param $fileName  - file name
+/// @param $path  - path to the font file
+/// @param $weight [normal]  - font weight
+/// @param $style [normal]  - font style
+@mixin customFont($fontName, $fileName, $path, $weight: normal, $style: normal) {
+	@font-face {
+		font-family: $fontName;
+		src: url($path + $fileName + '.woff?v=' + $compileVersion) format('woff'),
+		url($path + $fileName + '.ttf?v=' + $compileVersion) format('truetype');
+		font-weight: $weight;
+		font-style: $style;
+	}
+}
+
+/// Cross browser box-sizing
+/// @param $box-model [border-box] - type of box-model
+@mixin boxSizing($box-model: border-box) {
+	-webkit-box-sizing: $box-model;
+	-moz-box-sizing: $box-model;
+	box-sizing: $box-model;
+}
+
+/// Horizontal block centering
+@mixin blockCenter() {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+/// Text hide
+@mixin hideText() {
+	overflow: hidden;
+	text-indent: -500%;
+	white-space: nowrap;
+}
+
+/// clear fix
+@mixin pie-clearfix {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+/// Cross browser opacity
+/// @param {Number} $opacity - opacity value from 0 to 1
+@mixin opacity($opacity) {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$opacity * 100})";
+	filter: alpha(opactiy=($opacity * 100)); // should be after -ms-filter to support IE8 in IE7 rendering mode
+	-moz-opacity: $opacity;
+	-khtml-opacity: $opacity;
+	opacity: $opacity;
+}
+
+/// Shadow
+/// @param {Number} $horizontal - h-shadow
+/// @param {Number} $vertical - v-shadow
+/// @param {Number} $blur - blur
+/// @param {Color} $color - shadow color
+@mixin boxShadow($horizontal, $vertical, $blur, $color) {
+	-webkit-box-shadow: $horizontal $vertical $blur $color;
+	-moz-box-shadow: $horizontal $vertical $blur $color;
+	-ms-box-shadow: $horizontal $vertical $blur $color;
+	box-shadow: $horizontal $vertical $blur $color;
+}
+
+@mixin fontSmoothing($value: on) {
+	@if $value == on {
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+	@else {
+		-webkit-font-smoothing: subpixel-antialiased;
+		-moz-osx-font-smoothing: auto;
+	}
+}
+
+/// Sticky Footer
+/// @param {Number} $heightDesktop - footer desktop height
+/// @param {Number} $heightMobile - footer mobile height
+@mixin stickyFooter($heightDesktop, $heightMobile) {
+	.wrap-sticky {
+		min-height: 100%;
+		margin-bottom: -$heightDesktop - $desktopFooterIndent;
+
+		@include maxScreen($middle) {
+			margin-bottom: -$heightMobile - $mobileFooterIndent;
+		}
+
+		&:after {
+			content: "";
+			display: block;
+			height: $heightDesktop + $desktopFooterIndent;
+
+			@include maxScreen($middle) {
+				height: $heightMobile + $mobileFooterIndent;
+			}
+		}
+	}
+}
+
+@mixin transition($transition-property:all, $transition-time:1s, $method:linear) {
+	-webkit-transition: $transition-property $transition-time $method;
+	-moz-transition: $transition-property $transition-time $method;
+	transition: $transition-property $transition-time $method;
+}
+
+@mixin placeholder {
+	::-webkit-input-placeholder {@content}
+	:-moz-placeholder           {@content}
+	::-moz-placeholder          {@content}
+	:-ms-input-placeholder      {@content}
+}
+
+@mixin keyframes($animationName) {
+	@-webkit-keyframes #{$animationName} {
+		@content;
+	}
+	@-moz-keyframes #{$animationName} {
+		@content;
+	}
+	@-o-keyframes #{$animationName} {
+		@content;
+	}
+	@keyframes #{$animationName} {
+		@content;
+	}
+}
+
+// generic transform
+@mixin transform($transforms) {
+	-moz-transform: $transforms;
+	-o-transform: $transforms;
+	-ms-transform: $transforms;
+	-webkit-transform: $transforms;
+	transform: $transforms;
+}

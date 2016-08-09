@@ -1,0 +1,123 @@
+// Buttons
+
+.btn {
+	text-align: center;
+	cursor: pointer;
+}
+
+.btn-outline {
+	border: 3px solid $prime;
+	color: $white;
+	font-style: italic;
+	font-size: 1.8rem;
+
+	&:hover {
+		background-color:$prime;
+	}
+}
+
+.btn-big {
+	width: 24.5rem;
+	height: 6rem;
+	margin-top: 3rem;
+	margin-left: 26.7rem;
+	line-height: 5rem;
+}
+
+.btn-small {
+	width: 17rem;
+	height: 5rem;
+	line-height: 4rem;
+}
+
+.btn-product {
+	background-color: $prime;
+	height: 4rem;
+	width: 13rem;
+	color: white;
+	text-transform: uppercase;
+	line-height: 4rem;
+}
+
+.btn-cart-back {
+	width: 19rem;
+	height: 4.5rem;
+	background-color: $black;
+	color: $white;
+	line-height: 4.5rem;
+}
+
+.btn-cart-total {
+	width: 29rem;
+	height: 5rem;
+	line-height: 5rem;
+	background-color: $prime;
+	color: $white;
+	font-size: 2rem;
+}
+
+.btn-register {
+	width: 22rem;
+	height: 5rem;
+	line-height: 5rem;
+	background-color: $prime;
+	font-size: 1.8rem;
+	color: $white;
+	border: none;
+}
+
+.btn-login {
+	height: 5rem;
+	width: 9.5rem;
+	border: 5px solid $prime;
+	text-align: center;
+	font-size: 1.8rem;
+	line-height: 4rem;
+}
+
+.btn-continue {
+	width: 15.5rem;
+	height: 5rem;
+	background-color: $prime;
+	border: none;
+	color: $white;
+	font-size: 1.8rem
+}
+
+.btn-enter {
+	width: 10rem;
+	height: 5rem;
+	background-color: $prime;
+	font-size: 1.8rem;
+	border: none;
+	color: $white;
+}
+
+.btn-confirm {
+	width: 26rem;
+	height: 6rem;
+	line-height: 6rem;
+	color: $white;
+	background-color: $prime;
+	font-size: 2.2rem;
+}
+
+.btn-save {
+	width: 13.5rem;
+	height: 5rem;
+	line-height: 5rem;
+	background-color: $prime;
+	font-size: 1.8rem;
+	border: none;
+	color: $white;
+}
+
+.btn-back {
+	width: 23rem;
+	height: 5rem;
+	line-height: 5rem;
+	color: $white;
+	background-color: $prime;
+	border: none;
+	font-size: 1.8rem;
+}

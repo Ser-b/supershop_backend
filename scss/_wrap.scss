@@ -1,0 +1,9 @@
+// --------------------------------------------------
+// Wraps and containers
+// --------------------------------------------------
+
+.container {
+	@include blockCenter();
+	padding-left: 22rem;
+	padding-right: 2rem;
+}

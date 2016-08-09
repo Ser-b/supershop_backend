@@ -1,0 +1,73 @@
+// --------------------------------------------------
+// Forms global styles
+// --------------------------------------------------
+
+$colorText: $black;
+
+// Overwrite User agent input styles
+input,
+textarea,
+select {
+	@include placeholder {
+		color: $colorText;
+		opacity: 1;
+
+		&:focus {
+			 opacity: 0;
+		 }
+	 }
+
+	background: none;
+	border: 0;
+	box-shadow: none;
+	font-size: 1.8rem;
+	display: block;
+	padding: .4rem 0;
+	position: relative;
+	top: -.4rem;
+	width: 100%;
+	// change autofill text color
+	-webkit-text-fill-color: $colorText;
+
+	&:focus {
+		outline: none;
+	}
+
+	&:-webkit-autofill {
+		box-shadow: 0 0 0 50px $white inset;
+		border-radius: 0;
+	}
+}
+
+label {
+	color: $gray;
+	display: block;
+	font-size: 1.2rem;
+}
+
+// wrap for input, check-box, select
+.form-field {
+	display: block;
+	background: $white;
+	border: 1px solid $alto;
+	border-radius: $radius;
+	box-shadow: none;
+	margin-bottom: 1rem;
+	padding: 0 1rem;
+	position: relative;
+
+	label {
+		padding: .5rem 0;
+	}
+
+	// 'focus' class is used by field-focus.js
+	&.focus {
+		border: 1px solid $prime;
+	}
+}
+
+// class is hardcoded by jQuery Validation
+.field-validation-error {
+	font-size: 1.4rem;
+	color: red;
+}

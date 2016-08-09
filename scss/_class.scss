@@ -1,0 +1,496 @@
+// --------------------------------------------------
+// Helper classes
+// --------------------------------------------------
+
+// Position
+
+.relative {
+	position: relative;
+}
+
+.absolute {
+	position: absolute;
+}
+
+.fixed {
+	position: fixed;
+}
+
+// Z-index register
+
+%z-1 {
+	z-index: 1;
+}
+
+%z-2 {
+	z-index: 2;
+}
+
+%z-3 {
+	z-index: 3;
+}
+
+%z-4 {
+	z-index: 4;
+}
+
+%z-5 {
+	z-index: 5;
+}
+
+// Floated Elements
+// -------------------------
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.cf {
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+// Display Values
+// -------------------------
+
+.inline {
+	display: inline;
+}
+
+.block {
+	display: block;
+}
+
+.inline-block {
+	display: inline-block;
+}
+
+.no-wrap {
+	white-space: nowrap;
+}
+
+.text-capital {
+	text-transform: capitalize;
+}
+
+.text-upper {
+	text-transform: uppercase;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.line-through {
+	text-decoration: line-through;
+}
+
+.underline {
+	text-decoration: underline;
+}
+
+.text-shadow {
+	text-shadow: 1px 1px 1px $black;
+}
+
+// Aligning Elements
+// -------------------------
+
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.mobile-text-center {
+	@include maxScreen($middle) {
+		text-align: center;
+	}
+}
+
+.text-justify {
+	text-align: justify;
+}
+
+.block-center {
+	margin-right: auto;
+	margin-left:auto;
+}
+
+.align-top {
+	vertical-align: top;
+}
+
+.align-bottom {
+	vertical-align: bottom;
+}
+
+.align-middle {
+	vertical-align: middle;
+}
+
+.block-center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Margins
+// -------------------------
+
+// margins top
+
+.mt-s {
+	margin-top: 0.2rem;
+}
+
+.mt-0 {
+	margin-top: 0;
+}
+
+.mt-1 {
+	margin-top: 1rem;
+}
+
+.mt-2 {
+	margin-top: 2rem;
+}
+
+.mt-3 {
+	margin-top: 3rem;
+}
+
+.mt-4 {
+	margin-top: 4rem;
+}
+
+.mt-6 {
+	margin-top: 6rem;
+}
+
+// margins right
+
+.mr-s {
+	margin-right: 0.2rem;
+}
+
+.mr-0 {
+	margin-right: 0;
+}
+
+.mr-1 {
+	margin-right: 1rem;
+}
+
+.mr-2 {
+	margin-right: 2rem;
+}
+
+.mr-3 {
+	margin-right: 3rem;
+}
+
+.mr-4 {
+	margin-right: 4rem;
+}
+
+.mr-6 {
+	margin-right: 6rem;
+}
+
+// margins bottom
+
+.mb-s {
+	margin-bottom: 0.2rem;
+}
+
+.mb-0 {
+	margin-bottom: 0;
+}
+
+.mb-1 {
+	margin-bottom: 1rem;
+}
+
+.mb-2 {
+	margin-bottom: 2rem;
+}
+
+.mb-3 {
+	margin-bottom: 3rem;
+}
+
+.mb-4 {
+	margin-bottom: 4rem;
+}
+
+.mb-6 {
+	margin-bottom: 6rem;
+}
+
+.mb-15 {
+	margin-bottom: 15rem;
+}
+
+// margins left
+
+.ml-s {
+	margin-left: 0.2rem;
+}
+
+.ml-0 {
+	margin-left: 0;
+}
+
+.ml-1 {
+	margin-left: 1rem;
+}
+
+.ml-2 {
+	margin-left: 2rem;
+}
+
+.ml-3 {
+	margin-left: 3rem;
+}
+
+.ml-4 {
+	margin-left: 4rem;
+}
+
+.ml-6 {
+	margin-left: 6rem;
+}
+// Border radius
+// -------------------------
+
+.border {
+	&.border {
+		border: 1px solid $mercury;
+	}
+}
+
+
+.border-thick {
+	&.border-thick {
+		border: 2px solid $mercury;
+	}
+}
+
+.no-border {
+	&.no-border {
+		border: 0;
+	}
+}
+
+.radius {
+	border-radius: $radius;
+}
+
+// Border radius
+// -------------------------
+
+.radius {
+	border-radius: $radius;
+}
+
+.no-radius {
+	&.no-radius {
+		border-radius: 0;
+	}
+}
+
+.radius-top {
+	border-radius: $radius $radius 0 0;
+}
+
+.radius-right {
+	border-radius: 0 $radius $radius 0;
+}
+
+.radius-bottom {
+	border-radius: 0 0 $radius $radius;
+}
+
+.radius-left {
+	border-radius: 0 $radius $radius 0;
+}
+
+// Width and Height
+// -------------------------
+
+.half-width {
+	width: 50%;
+}
+
+.third-width {
+	width: 33.333%;
+}
+
+.full-height {
+	height: 100%;
+}
+
+// Colors
+// -------------------------
+
+.white {
+	&.white {
+		color: $white;
+	}
+}
+
+.black {
+	&.black {
+		color: $black;
+	}
+}
+
+.prime {
+	&.prime {
+		color: $prime;
+	}
+}
+
+.second {
+	&.second {
+		color: $second;
+	}
+}
+
+.red {
+	&.red {
+		color: $red;
+	}
+}
+
+.violet {
+	&.violet {
+    	color: $violet;
+	}
+}
+
+.gray {
+	&.gray {
+		color: $gray;
+	}
+}
+
+.navy {
+	&.navy {
+		color: $navyBlue;
+	}
+}
+
+// Width and Height
+// -------------------------
+
+.full-width {
+	&.full-width {
+		width: 100%;
+	}
+}
+
+// Background Colors
+// -------------------------
+
+.bg-prime {
+	&.bg-prime {
+		background-color: $prime;
+	}
+}
+
+.bg-white {
+	&.bg-white {
+		background-color: $white;
+	}
+}
+
+.bg-black {
+	&.bg-black {
+		background-color: $black;
+	}
+}
+
+.bg-light-grey {
+	&.bg-light-grey {
+		background-color: $concrete;
+	}
+}
+
+.bg-grey {
+	&.bg-grey {
+		background-color: $silver;
+	}
+}
+
+.bg-dark-grey {
+	&.bg-dark-grey {
+		background-color: $shuttleGray;
+	}
+}
+
+// Visibility
+// -------------------------
+
+.mobile-hidden {
+	&.mobile-hidden {
+		display: none;
+
+		@include minScreen($middle) {
+			display: block;
+		}
+	}
+}
+
+.mobile-visible {
+	&.mobile-visible {
+		display: block;
+
+		@include minScreen($middle) {
+			display: none;
+		}
+	}
+}
+
+.hidden {
+	&.hidden {
+		display: none;
+	}
+}
+
+.visible {
+	&.visible {
+		display: block;
+	}
+}
+
+.invisible {
+	&.invisible {
+		visibility: hidden;
+	}
+}
+
+// Cursor
+// -------------------------
+
+.pointer {
+	cursor: pointer;
+}
+

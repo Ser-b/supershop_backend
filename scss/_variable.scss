@@ -1,0 +1,83 @@
+// --------------------------------------------------
+// Variables Global
+// --------------------------------------------------
+
+// Colors
+// -------------------------
+
+// Blue
+
+$blue:					#3498db;
+$navyBlue:				#34495e;
+$dark: 					#243342;				
+$ocean:					#f6f8fc;
+// Green
+
+$green: 				#2ecc71;
+
+// Violet
+
+$violet:				#8e44ad;
+
+// Grays
+$black:					#000;
+$darkGray:				#636363;
+$lightBlack:			#1d1f20;
+$corduroy:				#5b5c5c;
+$alto:					#d6d6d6;
+$gray:					#95a5a6;
+$silverChalice:			#ababab;
+$silver:				#d8dde2;
+$shuttleGray:			#575f70;
+$concrete:				#f3f3f3;
+$light:					#ecf0f1;
+$mercury:				#e6e6e6;
+$white:					#fff;
+
+// Dark
+$brown: 				#ad5a00;
+$darkGray:				#222429;
+$darkBlue: 				#021563;
+
+
+// Red colors
+$red:					#ad0000;
+
+
+// Brand Colors
+$prime: $green;
+$second: $blue;
+
+// Font Sizes
+// -------------------------
+
+$fontSize: 1.4rem; //
+
+// Line heights
+// -------------------------
+
+$lineHeight: 1.4; // base desktop line height
+
+// Borders
+// -------------------------
+
+$radius: 3px; // static
+
+
+// Containers
+$mainContainer: 74rem;
+
+// Indents updated
+// --------------------------------------------------
+
+$indentSmall: 3%;
+$indentMiddle: 6%;
+$maxIndent: 16rem;
+
+// Font family
+$fontBase: Verdana, sans-serif; // base font family
+
+
+// Compile version for cache, random number
+// --------------------------------------------------
+$compileVersion: random(900000) + random(99999);
