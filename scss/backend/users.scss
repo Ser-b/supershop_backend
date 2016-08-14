@@ -1,0 +1,93 @@
+@import "../core";
+@import "common";
+
+.sidebar {
+	width: 20rem;
+	height: 100%;
+	float: left;
+	background-color: $navyBlue;
+	position: fixed;
+	top:0;
+}
+
+.menu-item {
+	display: block;
+	height: 5rem;
+	width: 20rem;
+	text-transform: uppercase;
+	color: $gray;
+	padding-left: 0.5rem;
+	line-height: 5rem;
+	margin: 2rem 0;
+
+	&:hover {
+		color: $white;
+	}
+}
+
+.active {
+	background-color: $dark;
+	color: $white;
+}
+
+.icon {
+	padding-top: 0.5rem;
+	text-align: center;
+}
+
+.logo {
+	background-color: $prime;
+	width: 20rem;
+	height: 9rem;
+	color: $white;
+	text-align: center;
+	text-transform: uppercase;
+	padding-top: 0.8rem;
+	display: inline-block;
+}
+
+.users-head {
+	color: $gray;
+	text-transform: uppercase;
+	font-weight: bold;
+	height: 5rem;
+	line-height: 5rem;
+	padding-left: 3rem;
+	padding-right: 3rem;
+	border-bottom: 1px solid $silver;
+}
+
+.review a {
+	color: $violet;
+	text-decoration: underline;
+	float: right;
+}
+
+.users {
+	min-height: 43rem;
+}
+
+.user-item {
+	height: 6rem;
+	line-height: 6rem;
+	border-bottom: 1px solid $silver;
+	padding-left: 3rem;
+	padding-right: 3rem;
+	font-size: 1.6rem;
+	color: $darkGray;
+
+	&:hover {
+		background-color: $ocean;
+		border-left: 4px solid $violet;
+	};
+}
+
+.mail, .tel {
+	text-align: center;
+	font-weight: 500;
+}
+
+.name {
+	color: $black;
+	font-weight: bold;
+}

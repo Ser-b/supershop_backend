@@ -1,0 +1,150 @@
+@import "../core";
+@import "common";
+
+.sidebar {
+	width: 20rem;
+	height: 100%;
+	float: left;
+	background-color: $navyBlue;
+	position: fixed;
+	top:0;
+}
+
+.menu-item {
+	display: block;
+	height: 5rem;
+	width: 20rem;
+	text-transform: uppercase;
+	color: $gray;
+	padding-left: 0.5rem;
+	line-height: 5rem;
+	margin: 2rem 0;
+
+	&:hover {
+		color: $white;
+	}
+}
+
+.active {
+	background-color: $dark;
+	color: $white;
+}
+
+.icon {
+	padding-top: 0.5rem;
+	text-align: center;
+}
+
+.logo {
+	background-color: $prime;
+	width: 20rem;
+	height: 9rem;
+	color: $white;
+	text-align: center;
+	text-transform: uppercase;
+	padding-top: 0.8rem;
+	display: inline-block;
+}
+
+.order-status {
+	color: $brown;
+	border-bottom: 1px dashed;
+	text-transform: uppercase;
+	margin-top: 0.6rem;
+	display: inline-block;
+}
+
+.order-inf-head {
+	color: $gray;
+	text-transform: uppercase;
+	font-weight: bold;
+	height: 5rem;
+	line-height: 5rem;
+	padding-left: 3rem;
+	padding-right: 3rem;
+	border-bottom: 1px solid $silver;
+}
+
+.order-item {
+	height: 6rem;
+	line-height: 6rem;
+	border-bottom: 1px solid $silver;
+	padding-left: 3rem;
+	padding-right: 3rem;
+	
+
+	&:hover {
+		background-color: $ocean;
+		border-left: 4px solid $violet;
+	};
+}
+
+.remove a {
+	color: $red;
+	text-decoration: underline;
+	float: right;
+}
+
+.item-name {
+	color: $second;
+	text-transform: uppercase;
+}
+
+.item-price, .total-item-price, .amount {
+	color: $black;
+	text-align: center;
+}
+
+.total {
+	height: 7rem;
+	font-size: 1.6rem;
+	text-align: right;
+	padding-top: 1.5rem;
+}
+
+.total-price {
+	font-size: 4.3rem;
+	line-height:4.3rem;
+	color: $black;
+	padding-right: 3rem;
+}
+
+.total-title {
+	color: $second;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.rub {
+	font-size: 2.2rem;
+}
+
+.order-form {
+	padding-left: 1.5rem;
+}
+
+input {
+	height: 2.7rem;
+}
+
+label {
+	margin-top: 2rem;
+	margin-bottom: 0.3rem;
+}
+
+textarea {
+	height: 8rem;
+	margin-bottom: 2rem;
+}
+
+.form-item {
+	padding: 0 1.5rem;
+	font-size: 1.8rem;
+}
+
+.cancel {
+	float: right;
+	text-decoration: underline;
+	color: $red;
+	font-size: 1.8rem;
+}

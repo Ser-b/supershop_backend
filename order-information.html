@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SuperShop</title>
+</head>
+<link rel="stylesheet" href="css/backend/order-information.css">
+<body>
+<section class="sidebar">
+<div class="logo">
+	<h3 class="h3">Super</h3>
+	<h2 class="h2 bold">Shop</h2>
+</div>
+	<nav class="menu">
+		<a class="menu-item active" href="#">
+			<div class="row">
+				<div class="l3 icon">
+					<img src="backend/img/cart-icon-active.png" alt="">
+				</div>
+				<div class="l9">
+					Заказы
+				</div>
+			</div>
+		</a>
+		<a class="menu-item" href="#">
+			<div class="row">
+				<div class="l3 icon">
+					<img src="backend/img/user-icon.png" alt="">
+				</div>
+				<div class="l9">
+					Пользователи
+				</div>
+			</div>
+		</a>
+		<a class="menu-item" href="#">
+			<div class="row">
+				<div class="l3 icon">
+					<img src="backend/img/goods-icon.png" alt="">
+				</div>
+				<div class="l9">
+					Товары
+				</div>
+			</div>
+		</a>
+		<a class="menu-item" href="#">
+			<div class="row">
+				<div class="l3 icon">
+					<img src="backend/img/categories-icon.png" alt="">
+				</div>
+				<div class="l9">
+					Категории
+				</div>
+			</div>
+		</a>
+		<div class="nav-bottom">
+			
+		</div>
+	</nav>
+</section>
+
+<main class="container">
+	<div class="row mt-3">
+		<div class="l4">
+			<h1 class="h1 navy">Заказ <span class="second">№4831</span>
+		</div>
+		<div class="l2">
+			<h4 class="h4 order-status">(у курьера)</h4></h1>
+		</div>
+	</div>
+	 
+	<div class="users bg-white gray mt-2">
+		<div class="order-inf-head">Содержимое заказа</div>
+		<div class="row order-item">
+			<div class="l3 item-name">Название товара</div>
+			<div class="l2 item-price">2 500 руб.</div>
+			<div class="l2 amount">5</div>
+			<div class="l2 total-item-price">12 500 руб.</div>
+			<div class="l3 remove"><a href="#">убрать из заказа</a></div>
+		</div>
+		<div class="row order-item">
+			<div class="l3 item-name">Название товара</div>
+			<div class="l2 item-price">2 500 руб.</div>
+			<div class="l2 amount">5</div>
+			<div class="l2 total-item-price">12 500 руб.</div>
+			<div class="l3 remove"><a href="#">убрать из заказа</a></div>
+		</div>
+		<div class="row order-item">
+			<div class="l3 item-name">Название товара</div>
+			<div class="l2 item-price">2 500 руб.</div>
+			<div class="l2 amount">5</div>
+			<div class="l2 total-item-price">12 500 руб.</div>
+			<div class="l3 remove"><a href="#">убрать из заказа</a></div>
+		</div>
+		<div class="row total">
+			<div class="LOffset7 l2 total-title">Итоговая<br> сумма</div>
+			<div class="l3 total-price">29 970<span class="rub">руб.</span></div>
+		</div>
+	</div>
+	<div class="order-info bg-white mt-2">
+		<div class="order-inf-head">Содержимое заказа</div>
+			<form class="order-form">
+				<div class="row">
+					<div class="l5 form-item">
+                            <label for="name">Контактное лицо (ФИО):</label>
+                            <input id="name" type="text" name="name" required/>
+                            <label for="tel">Контактный телефон:</label>
+                            <input id="tel" type="text" name="tel" required/>
+                            <label for="mail">E-mail:</label>
+                            <input id="mail" type="email" name="mail" required/>
+                    </div>
+                    <div class="l4 form-item">
+                    	<label for="town">Город:</label>
+                            <input id="town" type="text" name="town" required/>
+                            <label for="street">Улица:</label>
+                            <input id="street" type="text" name="street" required/>
+                            <div class="house l2">
+                                <label for="house">Дом</label>
+                                <input id="house" type="text" name="house" required/>
+                            </div>
+                            <div class="apartment LOffset2 l2">
+                                <label for="apart">Квартира</label>
+                                <input id="apart" type="text" name="apart"/>
+                            </div>
+                    </div>
+                    <div class="l3 form-item">
+                    	<label>Способ доставки:</label>
+                    	Курьерская доставка<br> с оплатой при получении
+                    </div>
+                    <div class="l9 form-item">
+                    	<label for="comment">Комментарий к заказу:</label>
+                        <textarea id="comment"></textarea>
+                    </div>
+                </div>
+            </form>
+		
+	</div>
+	<a class="cancel mt-3">Отменить заказ</a>
+</main>
+
+</body>
+</html>
