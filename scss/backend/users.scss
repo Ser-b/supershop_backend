@@ -61,6 +61,7 @@
 	color: $violet;
 	text-decoration: underline;
 	float: right;
+	font-size: 1.4rem;
 }
 
 .users {
@@ -75,6 +76,7 @@
 	padding-right: 3rem;
 	font-size: 1.6rem;
 	color: $darkGray;
+	cursor: pointer;
 
 	&:hover {
 		background-color: $ocean;

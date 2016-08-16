@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SuperShop</title>
+</head>
+<link rel="stylesheet" href="css/backend/items.css">
+<body>
+<section class="sidebar">
+<div class="logo">
+	<h3 class="h3">Super</h3>
+	<h2 class="h2 bold">Shop</h2>
+</div>
+	<nav class="menu">
+		<a class="menu-item" href="orders.html">
+			<div class="row">
+				<div class="l3 icon">
+					<img src="backend/img/cart-icon.png" alt="">
+				</div>
+				<div class="l9">
+					Заказы
+				</div>
+			</div>
+		</a>
+		<a class="menu-item" href="users.html">
+			<div class="row">
+				<div class="l3 icon">
+					<img src="backend/img/user-icon.png" alt="">
+				</div>
+				<div class="l9">
+					Пользователи
+				</div>
+			</div>
+		</a>
+		<a class="menu-item active" href="items.html">
+			<div class="row">
+				<div class="l3 icon">
+					<img src="backend/img/goods-icon-active.png" alt="">
+				</div>
+				<div class="l9">
+					Товары
+				</div>
+			</div>
+		</a>
+		<a class="menu-item" href="#">
+			<div class="row">
+				<div class="l3 icon">
+					<img src="backend/img/categories-icon.png" alt="">
+				</div>
+				<div class="l9">
+					Категории
+				</div>
+			</div>
+		</a>
+		<div class="nav-bottom">
+			
+		</div>
+	</nav>
+</section>
+
+<main class="container">
+	<h1 class="h1 navy mt-3">Товары</h1>
+	<div class="items bg-white gray mt-2">
+		<div class="row items-head">
+			<div class="l4">Название категории</div>
+			<div class="l4 text-center">Количество товаров</div>
+			<div class="l2 text-center"></div>
+			<div class="l2"></div>
+		</div>
+		<div class="row category-item">
+			<div class="l4 name">
+				<div class="row">
+					<div class="l1">
+							<img src="backend/img/folder.png" alt="">
+					</div>
+					<div class="l8 name">
+						Название категории1
+					</div>
+				</div>
+			</div>
+			<div class="l4 amount">194</div>
+			<div class="l2 remove">удалить</div>
+			<div class="l2 review"><a href="#">просмотр</a></div>	
+		</div>
+		<div class="row category-item">
+			<div class="l4 name">
+				<div class="row">
+					<div class="l1">
+							<img src="backend/img/folder.png" alt="">
+					</div>
+					<div class="l8 name">
+						Название категории2
+					</div>
+				</div>
+			</div>
+			<div class="l4 amount">14</div>
+			<div class="l2 remove">удалить</div>
+			<div class="l2 review"><a href="#">просмотр</a></div>	
+		</div>
+		<div class="row category-item">
+			<div class="l4 name">
+				<div class="row">
+					<div class="l1">
+							<img src="backend/img/folder.png" alt="">
+					</div>
+					<div class="l8 name">
+						Название категории3
+					</div>
+				</div>
+			</div>
+			<div class="l4 amount">0</div>
+			<div class="l2 remove">удалить</div>
+			<div class="l2 review"><a href="#">просмотр</a></div>	
+		</div>
+	</div>
+	<div class="add mt-3">
+		<div class="LOffset5 l3 add-label">Добавить категорию:</div>
+		<div class="l4">
+			<input class="add-input" type="text"/>
+			<div class="add-title mt-s">добавить категорию</div>
+		</div>
+	</div>
+</main>
+
+</body>
+</html>

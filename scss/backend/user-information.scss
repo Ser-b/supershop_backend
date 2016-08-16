@@ -46,12 +46,15 @@
 	display: inline-block;
 }
 
-.orders {
-	border: 1px solid $silver;
-	padding-bottom: 6rem;
+.order-status {
+	color: $brown;
+	border-bottom: 1px dashed;
+	text-transform: uppercase;
+	margin-top: 0.6rem;
+	display: inline-block;
 }
 
-.orders-head {
+.order-inf-head {
 	color: $gray;
 	text-transform: uppercase;
 	font-weight: bold;
@@ -68,7 +71,7 @@
 	border-bottom: 1px solid $silver;
 	padding-left: 3rem;
 	padding-right: 3rem;
-	cursor: pointer;
+	
 
 	&:hover {
 		background-color: $ocean;
@@ -76,19 +79,73 @@
 	};
 }
 
-.status a {
-	color: $prime;
-	font-weight: bold;
-	border-bottom: 1px dashed;
-}
-
-.sum {
-	color: black;
-	font-weight: bold;
-}
-
-.review a {
-	color: $violet;
+.remove a {
+	color: $red;
 	text-decoration: underline;
 	float: right;
+}
+
+.order-num {
+	color: $second;
+}
+
+.order-price {
+	font-weight: bold;
+}
+
+.order-price, .date {
+	text-align: center;
+}
+
+.user-info {
+	padding-bottom: 2rem;
+}
+
+.total {
+	height: 7rem;
+	font-size: 1.6rem;
+	text-align: right;
+	padding-top: 1.5rem;
+}
+
+.total-price {
+	font-size: 4.3rem;
+	line-height:4.3rem;
+	color: $black;
+	padding-right: 3rem;
+}
+
+.total-title {
+	color: $second;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.rub {
+	font-size: 2.2rem;
+}
+
+.order-form {
+	padding-left: 1.5rem;
+}
+
+input {
+	height: 2.7rem;
+}
+
+label {
+	margin-top: 2rem;
+	margin-bottom: 0.3rem;
+}
+
+.form-item {
+	padding: 0 1.5rem;
+	font-size: 1.8rem;
+}
+
+.cancel {
+	float: right;
+	text-decoration: underline;
+	color: $red;
+	font-size: 1.8rem;
 }

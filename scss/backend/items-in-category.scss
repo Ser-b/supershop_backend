@@ -46,12 +46,7 @@
 	display: inline-block;
 }
 
-.orders {
-	border: 1px solid $silver;
-	padding-bottom: 6rem;
-}
-
-.orders-head {
+.items-head {
 	color: $gray;
 	text-transform: uppercase;
 	font-weight: bold;
@@ -62,33 +57,68 @@
 	border-bottom: 1px solid $silver;
 }
 
-.order-item {
+.review a {
+	color: $violet;
+	text-decoration: underline;
+	float: right;
+}
+
+.remove {
+	color: $red;
+	cursor: pointer;
+	text-decoration: underline;
+	text-align: center;
+}
+
+.items {
+	min-height: 24rem;
+	padding-bottom: 3rem;
+	border: 1px solid $silver;
+}
+
+
+.item {
 	height: 6rem;
 	line-height: 6rem;
 	border-bottom: 1px solid $silver;
 	padding-left: 3rem;
 	padding-right: 3rem;
+	font-size: 1.6rem;
+	color: $darkGray;
 	cursor: pointer;
 
 	&:hover {
 		background-color: $ocean;
 		border-left: 4px solid $violet;
+
+		& .name {
+			color: $darkGreen;
+		};
 	};
 }
 
-.status a {
-	color: $prime;
-	font-weight: bold;
-	border-bottom: 1px dashed;
+.item-price {
+	text-align: center;
 }
 
-.sum {
-	color: black;
+.item-name, .current-title {
+	color: $black;
 	font-weight: bold;
 }
 
-.review a {
-	color: $violet;
+.category-name {
+	width: 25rem;
+	background: $white;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.current-category {
+	height: 4rem;
+}
+
+.rename {
+	color: $darkGreen;
 	text-decoration: underline;
-	float: right;
+	cursor: pointer;
 }
