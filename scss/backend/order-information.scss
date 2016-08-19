@@ -46,6 +46,14 @@
 	display: inline-block;
 }
 
+.nav-bottom {
+	width:20rem;
+	position: absolute;
+	text-align: center;
+	bottom: 2rem;
+
+}
+
 .order-status {
 	color: $brown;
 	border-bottom: 1px dashed;

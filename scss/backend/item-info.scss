@@ -1,6 +1,10 @@
 @import "../core";
 @import "common";
 
+main {
+	min-height: 100rem;
+}
+
 .sidebar {
 	width: 20rem;
 	height: 100%;
@@ -54,7 +58,15 @@
 
 }
 
-.items-head {
+.order-info-form {
+	padding-left: 3rem;
+}
+
+textarea {
+	height: 9rem;
+}
+
+.item-info-head {
 	color: $gray;
 	text-transform: uppercase;
 	font-weight: bold;
@@ -65,68 +77,82 @@
 	border-bottom: 1px solid $silver;
 }
 
-.review a {
-	color: $violet;
-	text-decoration: underline;
-	float: right;
+.item-info {
+	padding-bottom: 2rem;
 }
 
-.remove {
-	color: $red;
-	cursor: pointer;
-	text-decoration: underline;
-	text-align: center;
-}
-
-.items {
-	min-height: 24rem;
-	padding-bottom: 3rem;
-	border: 1px solid $silver;
-}
-
-
-.item {
-	height: 6rem;
-	line-height: 6rem;
-	border-bottom: 1px solid $silver;
-	padding-left: 3rem;
-	padding-right: 3rem;
-	font-size: 1.6rem;
-	color: $darkGray;
-	cursor: pointer;
-
-	&:hover {
-		background-color: $ocean;
-		border-left: 4px solid $violet;
-
-		& .name {
-			color: $darkGreen;
-		};
-	};
-}
-
-.item-price {
-	text-align: center;
-}
-
-.item-name, .current-title {
+.radio {
 	color: $black;
-	font-weight: bold;
+	height: 2rem;
+	margin-top: 1rem;
 }
 
-.category-name {
-	width: 25rem;
-	background: $white;
+.radio-button {
+	padding-top: 0.3rem;
+	padding-left: 1.2rem;
+}
+
+.photos {
+	padding: 0 3rem 2rem 3rem;
+	margin-top: 2rem;
+	font-size: 1.6rem;
+}
+
+.image-block {
+	text-align: center;
+}
+
+.image {
+	height: 15rem;
+	width: 15rem;
+	border: 1px solid grey;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 15rem;
+}
+
+.img1 {
+	background: url(../../backend/img/image1.jpg) no-repeat -2rem 1rem;
+}
+
+.img2 {
+	background: url(../../backend/img/image2.jpg) no-repeat -2rem;
+}
+
+.change, .delete, .load {
 	display: inline-block;
-	vertical-align: middle;
+	text-decoration: underline;
+	margin-top: 0.5rem;
 }
 
-.current-category {
-	height: 4rem;
+.change {
+	color: $darkGreen;
 }
 
-.rename {
+.delete {
+	color: $red;
+}
+
+.load {
+	color: $violet;
+}
+
+.variations {
+	padding-bottom: 2rem;
+}
+
+.item-variation {
+	padding-left: 3rem;
+	margin-bottom: 1rem;
+}
+
+.item-variation .delete {
+	margin-left: 1rem;
+}
+
+.save {
+	font-size: 1.8rem;
 	color: $darkGreen;
 	text-decoration: underline;
-	cursor: pointer;
+	text-align: center;
 }

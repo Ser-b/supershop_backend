@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SuperShop</title>
+</head>
+<link rel="stylesheet" href="css/backend/item-info.css">
+<body>
+<section class="sidebar">
+<div class="logo">
+	<h3 class="h3">Super</h3>
+	<h2 class="h2 bold">Shop</h2>
+</div>
+	<nav class="menu">
+		<a class="menu-item" href="orders.html">
+			<div class="row">
+				<div class="l3 icon">
+					<img src="backend/img/cart-icon.png" alt="">
+				</div>
+				<div class="l9">
+					Заказы
+				</div>
+			</div>
+		</a>
+		<a class="menu-item" href="users.html">
+			<div class="row">
+				<div class="l3 icon">
+					<img src="backend/img/user-icon.png" alt="">
+				</div>
+				<div class="l9">
+					Пользователи
+				</div>
+			</div>
+		</a>
+		<a class="menu-item active" href="items.html">
+			<div class="row">
+				<div class="l3 icon">
+					<img src="backend/img/goods-icon-active.png" alt="">
+				</div>
+				<div class="l9">
+					Товары
+				</div>
+			</div>
+		</a>
+		<a class="menu-item" href="#">
+			<div class="row">
+				<div class="l3 icon">
+					<img src="backend/img/categories-icon.png" alt="">
+				</div>
+				<div class="l9">
+					Категории
+				</div>
+			</div>
+		</a>
+		<div class="nav-bottom">
+			<span class="white">admin@mail.ru</span><br>
+			<a class="prime underline">выйти</a>
+		</div>
+	</nav>
+</section>
+
+<main class="container">
+			<h1 class="h1 navy mt-3">Просмотр товара </h1> 
+	 
+	<div class="item-info bg-white gray mt-2">
+		<div class="item-info-head">Информация о товаре</div>
+		
+			<form class="order-info-form">
+				<div class="row">
+					<div class="l6">	
+            			<label for="item-name" class="mt-2">Название товара:</label>
+            			<input id="item-name" type="text" name="name" required/>
+            			<label for="description" class="mt-2">Описание товара:</label>
+            			<textarea id="description"></textarea>
+            		</div>
+				<div class="LOffset1 l5">
+					<label class="ml-2 mt-2">Бейджик:</label>
+					<div class="radio"> 
+                        <div class="l1 radio-button">
+                            <input type="radio" name="delivery-group" value="empty" checked>
+                        </div>
+                        <div class="l11">
+                            Отсутствует
+                        </div>
+                    </div>
+                    <div class="radio"> 
+                        <div class="l1 radio-button">
+                            <input type="radio" name="delivery-group" value="new">
+                        </div>
+                        <div class="l11">
+                            NEW
+                        </div>
+                    </div> 
+                    <div class="radio"> 
+                        <div class="l1 radio-button">
+                            <input type="radio" name="delivery-group" value="hot">
+                        </div>
+                        <div class="l11">
+                            HOT
+                        </div>
+                    </div> 
+                    <div class="radio"> 
+                        <div class="l1 radio-button">
+                            <input type="radio" name="delivery-group" value="sale">
+                        </div>
+                        <div class="l11">
+                            SALE
+                        </div>
+                    </div>  
+				</div>
+			</div>
+			</form>
+		</div>
+	
+	
+	<div class="item-photo bg-white mt-2 gray">
+		<div class="item-info-head">Фотографии товара</div>
+		<div class="row photos">
+			<div class="l3 image-block">
+				<div class="image img1"></div>
+				<a class="change">Изменить</a><br>
+				<a class="delete">Удалить</a>
+			</div>
+			<div class="l3 image-block">
+				<div class="image img2"></div>
+				<a class="change">Изменить</a><br>
+				<a class="delete">Удалить</a>
+			</div>
+			<div class="l3 image-block">
+				<div class="image">не загружено</div>
+				<a class="load">Загрузить</a>
+			</div>
+			<div class="l3 image-block">
+				<div class="image">не загружено</div>
+				<a class="load">Загрузить</a>
+			</div>
+		</div>
+	</div>
+	<div class="variations bg-white mt-2">
+		<div class="item-info-head mb-2">Вариации товара</div>
+		<div class="row item-variation">
+			<div class="l6">
+				<input type="text"/>
+			</div>
+			<div class="l1">
+				<a class="delete">Удалить</a>
+			</div>
+		</div>
+		<div class="row item-variation">
+			<div class="l6">
+				<input type="text"/>
+			</div>
+			<div class="l1">
+				<a class="delete">Удалить</a>
+			</div>
+		</div>
+		<div class="row item-variation">
+			<div class="l6">
+				<input type="text"/>
+			</div>
+			<div class="l1">
+				<a class="delete">Удалить</a>
+			</div>
+		</div>
+	</div>
+	<div class="row bottom mt-3">
+		<div class="l2">
+			<a class="delete">Удалить товар</a>
+		</div>
+		<div class="LOffset7 l3 save">
+			<a>Сохранить изменения</a>
+		</div>
+	</div>	
+</main>
+
+</body>
+</html>
