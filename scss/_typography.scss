@@ -93,3 +93,23 @@ h6 {
 
 	}
 }
+
+
+//add fonts
+
+@font-face {
+  font-family: ProximaNova;
+  src: url(../../fonts/Proxima_Nova_Regular.otf);
+}
+ 
+@font-face {
+  font-family: ProximaNova;
+  src: url(../../fonts/Proxima_Nova_Bold.otf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: ProximaNova;
+  src: url(../../fonts/Proxima_Nova_Light.otf);
+  font-weight: 300;
+}
